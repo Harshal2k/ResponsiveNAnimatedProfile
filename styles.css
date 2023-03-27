@@ -1,0 +1,392 @@
+*::-webkit-scrollbar {
+    width: 1.2rem;
+    background-color: #e6e7ee;
+}
+
+
+*::-webkit-scrollbar-thumb {
+    background-color: #111;
+    border: 0.2rem solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 1rem;
+}
+
+.txtArea::-webkit-scrollbar {
+    background-color: transparent;
+    width: 1rem
+}
+
+.txtArea::-webkit-scrollbar-thumb {
+    border: 0.4rem solid rgba(0, 0, 0, 0);
+}
+
+* {
+    user-select: none;
+    /* supported by Chrome and Opera */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    font-family: 'Cabin', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    font-family: 'Montserrat', sans-serif;
+    margin-block: 0;
+}
+
+body {
+    margin: 0;
+}
+
+.hexContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 6rem;
+}
+
+.hexagon {
+    width: 20rem;
+    height: 24rem;
+    /* clip-path: polygon(0% 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%); */
+    clip-path: polygon(0 0, 100% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+}
+
+.hexagon::before {
+    background-color: aquamarine;
+    content: "";
+    height: inherit;
+    width: inherit;
+    position: absolute;
+    clip-path: polygon(0% 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+}
+
+header {
+    height: 48rem;
+    background-image: linear-gradient(134deg, #f5ebeb, transparent);
+    margin: 0;
+}
+
+.hgImg {
+    position: relative;
+    height: 42rem;
+    margin-left: 50%;
+    margin-top: 2.7rem;
+    transform: translateX(-50%);
+    bottom: 0;
+    z-index: 1;
+}
+
+.circle {
+    width: 40rem;
+    height: 40rem;
+    position: relative;
+    background: linear-gradient(129deg, #dfdfdf, transparent);
+    border-radius: 100%;
+    margin-left: 50%;
+    margin-top: -40rem;
+    transform: translateX(-50%);
+}
+
+.cardPos {
+    margin-left: -15%;
+    transform: rotate(356deg) translate(-50%);
+    margin-top: 12rem;
+    animation: cardAnimLeft 1s ease-out;
+}
+
+.cardPos2 {
+    margin-left: 110%;
+    transform: rotate(6deg) translate(-50%);
+    margin-top: 14rem;
+    animation: cardAnimRight 1s ease-out;
+}
+
+.card {
+    width: fit-content;
+    padding: 1rem;
+    border-radius: 1.7rem;
+    box-shadow: 18px 26px 35px 3px #dfdfdf;
+    background-color: #ffffff;
+    position: absolute;
+    z-index: 1;
+}
+
+h1 {
+    background-color: #412b2c;
+    padding: 0.3rem 0.01rem 0.3rem 0.58rem;
+    border-radius: 0.4rem;
+    color: white;
+    font-family: 'Lora', serif;
+    margin-block: 0;
+    font-size: 1.4rem;
+
+}
+
+.name {
+    background-color: #e5e539;
+    padding: 0.2rem;
+    border-radius: 0.4rem;
+    color: #412b2c;
+}
+
+.fullStackTxt {
+    margin-block: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.8rem;
+    color: #3e2d2d;
+}
+
+.devText {
+    font-size: 2.8rem;
+    margin-top: -1rem;
+    font-family: 'Montserrat', sans-serif;
+    margin-block-end: 0;
+    color: #3e2d2d;
+}
+
+.secContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+
+.secTitle {
+    font-size: 2.2rem;
+    color: #31344b;
+    width: fit-content;
+    background-color: #e6e7ee;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0.2rem 2rem 0.2rem 2rem;
+    border-radius: 0.5rem;
+    z-index: 1;
+    font-weight: 500;
+    box-shadow: 0.3vmax 0.3vmax 0.6vmax #b8b9be, -0.3vmax -0.3vmax 0.6vmax #fff;
+    border: 0.1vmax solid #d1d9e6;
+}
+
+.secTitle::before {
+    position: absolute;
+}
+
+.secDivider {
+    width: 100%;
+    height: 1rem;
+    background: linear-gradient(to left, transparent, #00ffb8 25%, #0095ff 75%, transparent 100%);
+    margin-bottom: 1.5rem;
+    z-index: 1;
+}
+
+.secDividerTop {
+    height: 50%;
+    width: 100%;
+    background-color: #a881ff;
+}
+
+.section {
+    margin-top: -3rem;
+    padding: 2rem;
+}
+
+.subSec {
+    display: flex;
+    margin-top: 3rem;
+}
+
+.toggleBtn{
+    position: absolute;
+    margin-left: 50%;
+    z-index: 2;
+    transform: translate(-50%,-60%);
+    font-size: 1.8rem;
+    border: none;
+    padding: 0.2rem 0.4rem;
+    background: orange;
+    color: white;
+}
+
+.eduTitle {
+    margin-block: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 5rem;
+    transform: rotate(270deg) translate(-30%, 1rem);
+    height: fit-content;
+    background-color: #fcbc00;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    color: #ffffff;
+}
+
+.cardText {
+    font-family: 'Montserrat', sans-serif;
+    margin-block: 0.6rem;
+    font-weight: 500;
+    background-color: #303030;
+    color: white;
+    padding-right: 0.2rem;
+    border-radius: 0.3rem;
+    width: fit-content;
+    position: relative;
+    z-index: 2;
+}
+
+.year {
+    position: absolute;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10rem;
+    margin-block: 0;
+    width: -webkit-fill-available;
+    text-align: center;
+    color: #f9f7f7;
+}
+
+.chip {
+    background-color: #f4b41a;
+    padding: 0.2rem;
+    border-radius: 0.3rem;
+    color: black;
+}
+
+.bar {
+    height: 1rem;
+    width: 100%;
+    background-color: black;
+    margin-top: 0.5rem;
+    border-radius: 5rem;
+    margin-bottom: 0.5rem;
+}
+
+.btn {
+    width: 5rem;
+    padding: 0.5rem;
+    border-radius: 100%;
+    box-shadow: 7px 20px 35px 3px #e7dcdc;
+    background-color: #ffffff;
+    z-index: 1;
+    height: 5rem;
+    cursor: pointer;
+    transition: all 0.5s;
+    margin: 1rem;
+}
+
+.btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 3px 4px 7px 3px #e7dcdc;
+}
+
+.btnPos1 {
+    position: absolute;
+    left: -17%;
+    padding: 0;
+    margin-top: 25rem;
+    animation: iconAnimLeft 0.7s ease-out;
+}
+
+.btnPos2 {
+    position: absolute;
+    left: -7%;
+    padding: 0;
+    margin-top: 32rem;
+    animation: iconAnimLeft 0.7s ease-out;
+}
+
+.btnPos3 {
+    position: absolute;
+    right: -7%;
+    padding: 0;
+    margin-top: 32rem;
+    animation: iconAnimRight 0.7s ease-out;
+}
+
+.btnPos4 {
+    position: absolute;
+    right: -17%;
+    padding: 0.5rem;
+    margin-top: 25rem;
+    width: 4.2rem;
+    height: 4.2rem;
+    animation: iconAnimRight 0.7s ease-out;
+}
+
+.btnPos5 {
+    position: absolute;
+    left: -14%;
+    padding: 0.5rem;
+    margin-top: 6rem;
+    width: 4.1rem;
+    height: 4.1rem;
+    animation: iconAnimLeft 0.7s ease-out;
+}
+
+.btnPos6 {
+    position: absolute;
+    right: -14%;
+    padding: 0.5rem;
+    margin-top: 6rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    animation: iconAnimRight 0.7s ease-out;
+}
+
+.sp {
+    font-size: 2rem;
+    color: #31344b;
+}
+
+
+@media screen and (max-width: 1198px) {
+    h1 {
+        font-size: 1.1rem;
+    }
+
+    .fullStackTxt {
+        font-size: 2.4rem;
+    }
+
+    .devText {
+        font-size: 2.4rem;
+    }
+
+    .cardPos {
+        margin-left: -2%;
+    }
+
+    .cardPos2 {
+        margin-left: 102%;
+    }
+}
+
+
+@keyframes iconAnimRight {
+    0% {
+        right: 17rem;
+        margin-top: 17rem;
+    }
+}
+
+@keyframes iconAnimLeft {
+    0% {
+        left: 17rem;
+        margin-top: 17rem;
+    }
+}
+
+@keyframes cardAnimLeft {
+    0% {
+        margin-left: 17%;
+        transform: rotate(272deg) translate(-50%);
+        margin-top: 12rem;
+    }
+}
+
+@keyframes cardAnimRight {
+    0% {
+
+        margin-left: 27%;
+        transform: rotate(90deg) translate(-50%);
+        margin-top: 25rem;
+
+    }
+}
